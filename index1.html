@@ -1,0 +1,77 @@
+<html>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	</br></br>
+	<body>
+		<div id="container">
+			<!-- <ul id="list"> -->
+				<!-- <button id="btn1">btn1</button> -->
+			<!-- </ul> -->
+			<button id="btn1">btn1</button>
+			<p class="para1">This is not a paragraph</p>
+			<p class="para2">This is another paragraph</p>	
+			<p></p>
+			<div id="myDiv"></div>
+			
+			</br>
+			<!-- <h1 id = "coords"><h1> -->
+			<ul>
+				<li>List Item1</li>
+				<li>List Item2</li>
+				<li>List Item3</li>
+				<li>List Item4</li>
+			</ul>
+			<ul id = "cities"> </ul>
+		</div>
+		
+	</body>
+	<style>
+		.myClass
+		{	
+			color:blue;
+			background:black;
+		}
+	</style>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		<!-- $('#btn1').click(function(e){ -->
+			<!-- alert(e.currentTarget.outerHTML); -->
+		<!-- }); -->
+		$(document).ready
+		(
+			function() 
+			{			
+				/*$("#panel1").hide();
+				$("#panel1").show(1000);
+				$("#panel2").slideUp(1000).delay(1000).slideDown(1000);
+				
+				$("#panel4").css({color:'red',fontWeight:'bold'});*/
+							
+				<!-- $('#btn4').on('mouseover',function() -->
+				<!-- { -->
+					<!-- $('#panel4').fadeToggle(); -->
+				<!-- }); -->
+				
+				<!-- $(document).on('mousemove', function(e) -->
+				<!-- { -->
+					<!-- $('#coords').html('Coords: Y: '+e.clientY+ " X: "+ e.clientX); -->
+				<!-- }); -->
+				$('#btn1').on('click', function(e)
+				{
+					$('p.para1').css('color','Red');
+					$('p.para2').toggleClass('myClass');
+				});
+				$('#myDiv').html('<h3>Hello World</h3>');
+				<!-- $('ul').append('<li>Appended Item</li>'); -->
+				<!-- $('ul').prepend('<li>Prepended Item</li>'); -->
+				//alert($('#myDiv').text());
+				
+				var myArr=['BBSR','BLORE','DELHI','MUMBAI'];
+				
+				$.each(myArr,function(i,val)
+				{
+					$('#cities').append('<li>'+ val +'</li>');
+				});
+			} 
+		);
+	</script>
+</html>	
